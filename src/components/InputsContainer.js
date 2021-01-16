@@ -7,15 +7,13 @@ export default class InputsContainer extends Component {
     const { transformers, text } = this.props;
 
     return (
-      <div>
+      <div className="row" style={{ marginTop: '30px' }}>
         {
           transformers.map(({ id, description, handle }) =>
             <Input key={id}
-              text={text}
+              text={handle(text)}
               id={id}
-              handle={handle}
               description={description} />
-
           )
         }
       </div>

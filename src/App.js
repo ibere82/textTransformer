@@ -15,7 +15,7 @@ const TRANSFORMERS = [
     id: 'trsf-02',
     description: 'Texto Numérico',
     handle: text => text.toUpperCase()
-      .replace(/O/g, '0').replace(/L/g, '1')
+      .replace(/O/g, '0').replace(/I/g, '1')
       .replace(/E/g, '3').replace(/A/g, '4')
       .replace(/S/g, '5').replace(/T/g, '7')
   },
@@ -32,7 +32,7 @@ const TRANSFORMERS = [
   },
   {
     id: 'trsf-05',
-    description: 'MaIúScUlAs e mInÚsCuLaS AlTeRnAdAs',
+    description: 'aLtErNaDaS',
     handle: text => text.toLowerCase().split('').map((letter, index) =>
       index % 2 ? letter.toUpperCase() : letter
     ).join('')
@@ -69,7 +69,7 @@ const TRANSFORMERS = [
   {
     id: 'trsf-09',
     description: 'Texto CSV',
-    handle: text => `"${onlyOneSpace(text).replace(/ /g, '";"')}"`
+    handle: text => text.trim() ? `"${onlyOneSpace(text).replace(/ /g, '"; "')}"` : ""
   },
   {
     id: 'trsf-10',
@@ -97,15 +97,8 @@ export default class App extends Component {
     return (
       <div className="container" >
         <h3 className="center" style={{ marginBottom: "40px" }} >Transformador de textos</h3>
-
         <MainTextInput text={text} handle={this.handleInput} />
-
-        <div style={{ marginTop: '20px' }}>
-          <h4 className="center">Transformações</h4>
-
-          <InputsContainer transformers={TRANSFORMERS} text={text} />
-
-        </div>
+        <InputsContainer transformers={TRANSFORMERS} text={text} />
       </div>
     );
   };

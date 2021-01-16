@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import '../index.css';
 
 export default class Input extends Component {
+
+  componentDidUpdate() {
+    const { id, text } = this.props;
+    const elem = document.getElementById(id);
+    elem.disabled = !text;
+  };
 
   handleCopyButton = () => {
     const { id } = this.props;
@@ -11,27 +16,23 @@ export default class Input extends Component {
   };
 
   render() {
-    const { text, id, description, handle } = this.props;
-    const transformedText = handle(text)
+    const { text, id, description } = this.props;
+    const icon = 'content_copy';
     return (
-      <div className="default-flex-row">
-
+      <div className="default-flex-row col s12 m6 l4">
         <div className="input-field" style={{ flex: 6 }}>
-          <input id={id} type="text" value={transformedText} readOnly />
           <label htmlFor={id} className="active">{description}</label>
-
+          <input id={id} type="text" value={text} readOnly />
         </div>
-
         <span
-          style={{ cursor: 'pointer' }}
           title="Copiar"
           alt="Copiar"
           className="material-icons"
           onClick={this.handleCopyButton}
+          style={text ? { cursor: 'pointer' } : { color: 'gray' }}
         >
-          content_copy
+          {icon}
         </span>
-
       </div>
     );
   };

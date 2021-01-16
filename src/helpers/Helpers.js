@@ -1,4 +1,4 @@
-export function removeSpecialCharacters(text) {
+function removeAccents(text) {
   return text
     .replace(/[áàãâä]/gu, 'a')
     .replace(/[éèẽêë]/gu, 'e')
@@ -12,13 +12,15 @@ export function removeSpecialCharacters(text) {
     .replace(/[ÚÙŨÛÜ]/gu, 'U');
 };
 
-export function specialCases(text) {
-  return onlyOneSpace(removeSpecialCharacters(text)).replace(/[^a-zA-Z0-9\s]/gi, '');
+function specialCases(text) {
+  return onlyOneSpace(removeAccents(text)).replace(/[^a-zA-Z0-9\s]/gi, '');
 };
 
-export function onlyOneSpace(text) {
+function onlyOneSpace(text) {
   return text.trim()
     .split(' ')
-    .filter(elem => elem !== "")
+    .filter(word => word)
     .join(' ');
 };
+
+export { specialCases, onlyOneSpace };
