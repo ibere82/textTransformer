@@ -11,12 +11,13 @@ export default class Input extends Component {
   };
 
   render() {
-    const { text, id, description } = this.props;
+    const { text, id, description, handle } = this.props;
+    const transformedText = handle(text)
     return (
       <div className="default-flex-row">
 
         <div className="input-field" style={{ flex: 6 }}>
-          <input id={id} type="text" value={text} readOnly />
+          <input id={id} type="text" value={transformedText} readOnly />
           <label htmlFor={id} className="active">{description}</label>
 
         </div>

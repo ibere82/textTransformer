@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class MainTextInput extends Component {
 
   handleText = (e) => {
-    this.props.handle(e.target.value)
+    this.props.handle(e.target.value);
   };
 
   render() {

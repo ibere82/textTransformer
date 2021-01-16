@@ -12,6 +12,10 @@ export function removeSpecialCharacters(text) {
     .replace(/[ÚÙŨÛÜ]/gu, 'U');
 };
 
+export function specialCases(text) {
+  return onlyOneSpace(removeSpecialCharacters(text)).replace(/[^a-zA-Z0-9\s]/gi, '');
+};
+
 export function onlyOneSpace(text) {
   return text.trim()
     .split(' ')
