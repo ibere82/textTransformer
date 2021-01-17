@@ -1,7 +1,7 @@
 Aplicação desenvolvida para transformar textos em outros formatos.
 
 Link para visualizar no codesandbox:
-https://ris31.csb.app/
+https://g6wp7.csb.app/
 
 Implementação inpirada na proposta original do Professor Raphael Gomide durante o bootcamp Desenvolvedor FullStack - IGTI
 
