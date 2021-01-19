@@ -1,7 +1,11 @@
 Aplicação desenvolvida para transformar textos em outros formatos.
 
 Link para visualizar no codesandbox:
+<<<<<<< HEAD
 https://text-transformer.herokuapp.com/
+=======
+https://g6wp7.csb.app/
+>>>>>>> 2e766176068ac9eff77dee8cda524354489d19e0
 
 Implementação inpirada na proposta original do Professor Raphael Gomide durante o bootcamp Desenvolvedor FullStack - IGTI
 
