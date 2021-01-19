@@ -1,7 +1,10 @@
 Aplicação desenvolvida para transformar textos em outros formatos.
 
+<<<<<<< HEAD
 Link para visualizar no codesandbox:
 <<<<<<< HEAD
+=======
+>>>>>>> develop
 https://text-transformer.herokuapp.com/
 =======
 https://g6wp7.csb.app/
