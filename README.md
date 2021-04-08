@@ -2,7 +2,7 @@ Aplicação desenvolvida para transformar textos em outros formatos.
 
 https://text-transformer.herokuapp.com/
 
-Implementação inpirada na proposta original do Professor Raphael Gomide durante o bootcamp Desenvolvedor FullStack - IGTI
+Implementação inspirada na proposta original do Professor Raphael Gomide durante o bootcamp Desenvolvedor FullStack - IGTI
 
 Caracteírsticas da proposta original:
 
